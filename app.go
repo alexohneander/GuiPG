@@ -23,11 +23,6 @@ func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
 }
 
-// Greet returns a greeting for the given name
-func (a *App) Greet(name string) string {
-	return fmt.Sprintf("Hello %s, It's show time!", name)
-}
-
 // Encrypt returns a encrypted string for the given message and private key
 func (a *App) Encrypt(message string, pubkey string) string {
 	pgp := crypto.PGP()
@@ -51,7 +46,7 @@ func (a *App) Encrypt(message string, pubkey string) string {
 		return ""
 	}
 
-	fmt.Printf("%s", armored)
+	// fmt.Printf("%s", armored)
 	return fmt.Sprintf("%s", armored)
 }
 
@@ -77,7 +72,7 @@ func (a *App) Sign(message string, privkey string, password string) string {
 
 	signer.ClearPrivateParams()
 
-	fmt.Printf("%s", cleartextArmored)
+	// fmt.Printf("%s", cleartextArmored)
 	return fmt.Sprintf("%s", cleartextArmored)
 }
 
@@ -103,6 +98,6 @@ func (a *App) Decrypt(message string, privkey string, password string) string {
 
 	decHandle.ClearPrivateParams()
 
-	fmt.Printf("%s", decrypted)
+	// fmt.Printf("%s", decrypted)
 	return fmt.Sprintf("%s", decrypted)
 }

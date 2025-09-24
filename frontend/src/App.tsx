@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import logo from './assets/images/logo-gnupg.png';
+import logo from './assets/images/gopenpgp.svg';
 import './App.css';
-import { Greet, Encrypt, Sign, Decrypt } from "../wailsjs/go/main/App";
+import { Encrypt, Sign, Decrypt } from "../wailsjs/go/main/App";
 
 function App() {
-  const [textContent, setTextContent] = useState("Message");
+  const [textContent, setTextContent] = useState("");
   const updateTextContent = (e: any) => setTextContent(e.target.value);
   const [privateKey, setPrivateKey] = useState('');
   const updatePrivateKey = (e: any) => setPrivateKey(e.target.value);

@@ -5,6 +5,4 @@ export function Decrypt(arg1:string,arg2:string,arg3:string):Promise<string>;
 
 export function Encrypt(arg1:string,arg2:string):Promise<string>;
 
-export function Greet(arg1:string):Promise<string>;
-
 export function Sign(arg1:string,arg2:string,arg3:string):Promise<string>;
